@@ -101,6 +101,7 @@ while True:
             motionTime.append(datetime.now())
             print(f"m key detected")
             print(f"var_motion={var_motion}")
+            print(f"len(motionTime)={len(motionTime)}")
         break   # break the while loop on m key
 
 # At last we are adding the time of motion or var_motion inside the data frame
