@@ -99,7 +99,8 @@ while True:
         # adding the motion variable value to motiontime list when something is moving on the screen
         if var_motion == 1:
             motionTime.append(datetime.now())
-        break
+
+        break   # break the while loop on m key
 
 # At last we are adding the time of motion or var_motion inside the data frame
 for a in range(0, len(motionTime), 2):
