@@ -109,6 +109,7 @@ for a in range(0, len(motionTime), 2):
     dataFrame = dataFrame.append({"Initial": motionTime[a], "Final": motionTime[a + 1]}, ignore_index=True)
 
 # To record all the movements, creating a CSV file
+print(f"len(dataFrame)={len(dataFrame)}")
 dataFrame.to_csv("EachMovement.csv")
 
 # Releasing the video
