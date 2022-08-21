@@ -103,7 +103,7 @@ while True:
 
 # At last we are adding the time of motion or var_motion inside the data frame
 for a in range(0, len(motionTime), 2):
-    dataFrame = dataFrame.append({"Initial": time[a], "Final": motionTime[a + 1]}, ignore_index=True)
+    dataFrame = dataFrame.append({"Initial": motionTime[a], "Final": motionTime[a + 1]}, ignore_index=True)
 
 # To record all the movements, creating a CSV file
 dataFrame.to_csv("EachMovement.csv")
