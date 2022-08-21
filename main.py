@@ -1,28 +1,25 @@
 # https://www.kdnuggets.com/2022/08/perform-motion-detection-python.html
 
-# Importing the Pandas libraries
-import pandas as panda
+import pandas as panda              # Importing the Pandas libraries
+import cv2                          # Importing the OpenCV libraries
+import time                         # Importing the time module
+from datetime import datetime       # Importing the datetime function of the datetime module
 
-# Importing the OpenCV libraries
-import cv2
+initialState = None                             # Assigning our initial state in the form of variable
+                                                # initialState as None for initial frames
 
-# Importing the time module
-import time
+motionTrackList = [None, None]                  # List of all the tracks when there is any
+                                                # detected of motion in the frames
 
-# Importing the datetime function of the datetime module
-from datetime import datetime
+motionTime = []                                 # A new list 'time' for storing the time
+                                                # when movement detected
 
-# Assigning our initial state in the form of variable initialState as None for initial frames
-initialState = None
 
-# List of all the tracks when there is any detected of motion in the frames
-motionTrackList = [None, None]
-
-# A new list 'time' for storing the time when movement detected
-motionTime = []
-
-# Initialising DataFrame variable 'dataFrame' using pandas libraries panda with Initial and Final column
-dataFrame = panda.DataFrame(columns=["Initial", "Final"])
+dataFrame = panda.DataFrame(                    # Initialising DataFrame
+                                                # variable 'dataFrame' using pandas
+                                                # libraries panda with Initial and Final column
+                columns=["Initial", "Final"]
+)
 
 # starting the webCam to capture the video using cv2 module
 video = cv2.VideoCapture(0)
