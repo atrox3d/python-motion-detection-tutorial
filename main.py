@@ -63,7 +63,6 @@ while True:
             continue
 
         var_motion = 1
-        print(f"debug | var_motion={var_motion}")
         (cur_x, cur_y, cur_w, cur_h) = cv2.boundingRect(cur)
 
         # To create a rectangle of green color around the moving object
